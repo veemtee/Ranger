@@ -108,7 +108,7 @@ public class SpetsNavmesh : MonoBehaviour
 
     public void idle()
     {
-        Debug.Log("idlessä");
+        //Debug.Log("idlessä");
         GetComponent<NavMeshAgent>().speed = 0.01f;
         animator.SetFloat("Speed", 0.33f);
     }

@@ -11,31 +11,46 @@ public class GrenadeScript : MonoBehaviour
     public GameObject sirpale;
     public float expRadius;
     public float expForce = 500f;
-    public Collider explosionRadius;
+    //public Collider explosionRadius;
 
     public float force;
     GameObject spawn;
     public Rigidbody rigid;
-
+    public bool heitto = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
         countdown = timer;
-        spawn = GameObject.FindGameObjectWithTag("HeroGranu");
+        //spawn = GameObject.FindGameObjectWithTag("HeroGranu");
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         countdown -= Time.deltaTime;
         if (countdown <= 0 && !hasExploded)
         {
-            explosionRadius.gameObject.SetActive(true);
+            //explosionRadius.gameObject.SetActive(true);
             explosion();
             hasExploded = true;
         }
+
+        if (heitto == true)
+        {
+            rigid.AddForce(transform.up * force * Time.deltaTime, ForceMode.Impulse);
+            heitto = false;
+        }
+
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = new Color(1, 1, 0, 0.75f);
+        Gizmos.DrawWireSphere(transform.position, expRadius);
+        Gizmos.color = new Color(2, 2, 2, 0.75f);
+        Gizmos.DrawWireSphere(transform.position, expForce);
     }
 
     public void GranuSpawn()
@@ -50,15 +65,18 @@ public class GrenadeScript : MonoBehaviour
     public void GranuLentoon()
     {
         Debug.Log("ranulennossa");
-        transform.parent = null;
-        rigid.useGravity = true;
-        transform.rotation = spawn.transform.rotation;
-        rigid.AddForce(transform.forward * force);
+        heitto = true;
+        //transform.parent = null;
+        //rigid.useGravity = true;
+        //transform.rotation = spawn.transform.rotation;
+        //rigid.AddForce(transform.up * force * Time.deltaTime, ForceMode.Impulse);
+        
+        Debug.Log("ranulennossa2");
     }
 
     public void explosion()
     {
-        explosionRadius.gameObject.SetActive(true);
+        //explosionRadius.gameObject.SetActive(true);
         GameObject spawnedParticle = Instantiate(explosionEffect, transform.position, transform.rotation);
         Destroy(spawnedParticle, 1);
 
@@ -76,7 +94,7 @@ public class GrenadeScript : MonoBehaviour
             }
         }
 
-        Invoke("Tuho", 1.5f);
+        Invoke("Tuho", 0.01f);
         
     }
 

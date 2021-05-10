@@ -23,7 +23,7 @@ public class HeroVol4 : MonoBehaviour
 
     int shotIndex = 0;
 
-    private float granuLastFire = 0.0f;
+    //private float granuLastFire = 0.0f;
     public float granuFireRate;
 
     public bool canShoot = true;
@@ -68,7 +68,7 @@ public class HeroVol4 : MonoBehaviour
 
         if (inputaxis.x == 0 && inputaxis.y == 0 && Input.GetButton("Fire1") == false)
         {
-            Debug.Log("idleen");
+            //Debug.Log("idleen");
             idle();
         }
         //else
@@ -182,9 +182,9 @@ public class HeroVol4 : MonoBehaviour
         canShoot = false;
         MyAnimator.SetTrigger("Granu");
         Debug.Log("heittokutsuikoPRE");
-        GameObject grenade = Instantiate(granu, granuSpawn.transform.position, granuSpawn.transform.rotation);
-        grenadeThrow = grenade.GetComponent<GrenadeThrow>(); //GameObject.FindGameObjectWithTag("HeroGranu").GetComponent<GrenadeThrow>();
-        grenadeThrow.GranuSpawn();
+        //GameObject grenade = Instantiate(granu, granuSpawn.transform.position, granuSpawn.transform.rotation);
+        //grenadeThrow = grenade.GetComponent<GrenadeThrow>(); //GameObject.FindGameObjectWithTag("HeroGranu").GetComponent<GrenadeThrow>();
+        //grenadeThrow.GranuSpawn();
         Debug.Log("heittokutsuiko");
         //Instantiate(granu, granuSpawn.transform.position, sarjaSpawn[shotIndex].transform.rotation);
 

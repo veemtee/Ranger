@@ -8,7 +8,9 @@ public class GranuRelease : MonoBehaviour
     //GranuSkript granuScript;
     //public GameObject spawn;
     //Rigidbody granunRb;
-    GrenadeThrow grenthrow;
+    GrenadeScript grenthrow;
+    public GameObject granu;
+    public GameObject granuSpawn;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +33,9 @@ public class GranuRelease : MonoBehaviour
     {
         //grenthrow = GameObject.FindGameObjectWithTag("HeroGranu").GetComponent<GrenadeThrow>();
         Debug.Log("ThrowBall");
-        grenthrow = GameObject.FindGameObjectWithTag("HeroGranu").GetComponent<GrenadeThrow>();
+        Instantiate(granu, granuSpawn.transform.position, granuSpawn.transform.rotation);
+        grenthrow = granu.GetComponent<GrenadeScript>();
+        //grenthrow = GameObject.FindGameObjectWithTag("HeroGranu").GetComponent<GrenadeThrow>();
         grenthrow.GranuLentoon();
         Debug.Log("ThrowBall2");
         //granuScript = granu.GetComponent<GrenadeThrow>();
