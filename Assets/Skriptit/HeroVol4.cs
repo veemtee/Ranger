@@ -46,7 +46,7 @@ public class HeroVol4 : MonoBehaviour
 
         if (inputaxis.x != 0 || inputaxis.y != 0)
         {
-            Debug.Log("mennään directioniin");
+            //Debug.Log("mennään directioniin");
             ukkodirection();
         }
             
@@ -93,10 +93,10 @@ public class HeroVol4 : MonoBehaviour
         //if (inputaxis.x != 0 || inputaxis.y !=0)
         //{
         //MyAnimator.SetFloat("Speed", 1f);
-        Debug.Log("normijuoksu");
+        //Debug.Log("normijuoksu");
         MyAnimator.SetFloat("Speed", 1f);
             SetDirection(0, CalculateAngle(inputaxis.x, inputaxis.y), 0);
-        Debug.Log("loppudirection");
+        //Debug.Log("loppudirection");
         //}
     }
     
@@ -121,7 +121,7 @@ public class HeroVol4 : MonoBehaviour
 
         if (inputaxis.x == 0 && inputaxis.y == 0)
         {
-            Debug.Log("shootinplace");
+            //Debug.Log("shootinplace");
             MyAnimator.SetFloat("Speed", 0.15f);
             if (Time.time > lastFire)
             {
