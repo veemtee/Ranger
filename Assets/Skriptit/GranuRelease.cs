@@ -33,6 +33,7 @@ public class GranuRelease : MonoBehaviour
         Debug.Log("ThrowBall");
         grenthrow = GameObject.FindGameObjectWithTag("HeroGranu").GetComponent<GrenadeThrow>();
         grenthrow.GranuLentoon();
+        Debug.Log("ThrowBall2");
         //granuScript = granu.GetComponent<GrenadeThrow>();
         //granuScript.ReleaseMe();
     }
