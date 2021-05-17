@@ -17,6 +17,7 @@ public class GrenadeScript : MonoBehaviour
     GameObject spawn;
     public Rigidbody rigid;
     public bool heitto = false;
+    public GameObject sirpalePrefab;
 
 
     // Start is called before the first frame update
@@ -39,7 +40,7 @@ public class GrenadeScript : MonoBehaviour
 
         if (heitto == true)
         {
-            rigid.AddForce(transform.up * force * Time.deltaTime, ForceMode.Impulse);
+            rigid.AddForce(transform.forward * force * Time.deltaTime, ForceMode.Impulse);
             heitto = false;
         }
 
@@ -77,6 +78,7 @@ public class GrenadeScript : MonoBehaviour
     public void explosion()
     {
         //explosionRadius.gameObject.SetActive(true);
+        Invoke("Sirpaleet", 0f);
         GameObject spawnedParticle = Instantiate(explosionEffect, transform.position, transform.rotation);
         Destroy(spawnedParticle, 1);
 
@@ -96,6 +98,88 @@ public class GrenadeScript : MonoBehaviour
 
         Invoke("Tuho", 0.01f);
         
+    }
+
+    void Sirpaleet()
+    {
+        for (int i = 0; i < 16; i++)
+        {
+            switch (i)
+            {
+                case 0:
+                    transform.localRotation = Quaternion.Euler(0, 0, 0);
+                    Instantiate(sirpalePrefab, transform.position, transform.localRotation);
+                    break;
+
+                case 1:
+                    transform.localRotation = Quaternion.Euler(0, 90, 0);
+                    Instantiate(sirpalePrefab, transform.position, transform.localRotation);
+                    break;
+
+                case 2:
+                    transform.localRotation = Quaternion.Euler(0, 180, 0);
+                    Instantiate(sirpalePrefab, transform.position, transform.localRotation);
+                    break;
+
+                case 3:
+                    transform.localRotation = Quaternion.Euler(0, 270, 0);
+                    Instantiate(sirpalePrefab, transform.position, transform.localRotation);
+                    break;
+
+                case 4:
+                    transform.localRotation = Quaternion.Euler(0, 45, 0);
+                    Instantiate(sirpalePrefab, transform.position, transform.localRotation);
+                    break;
+                case 5:
+                    transform.localRotation = Quaternion.Euler(0, 135, 0);
+                    Instantiate(sirpalePrefab, transform.position, transform.localRotation);
+                    break;
+                case 6:
+                    transform.localRotation = Quaternion.Euler(0, 215, 0);
+                    Instantiate(sirpalePrefab, transform.position, transform.localRotation);
+                    break;
+                case 7:
+                    transform.localRotation = Quaternion.Euler(0, 315, 0);
+                    Instantiate(sirpalePrefab, transform.position, transform.localRotation);
+                    break;
+                case 8:
+                    transform.localRotation = Quaternion.Euler(0, 22, 0);
+                    Instantiate(sirpalePrefab, transform.position, transform.localRotation);
+                    break;
+
+                case 9:
+                    transform.localRotation = Quaternion.Euler(0, 111, 0);
+                    Instantiate(sirpalePrefab, transform.position, transform.localRotation);
+                    break;
+
+                case 10:
+                    transform.localRotation = Quaternion.Euler(0, 200, 0);
+                    Instantiate(sirpalePrefab, transform.position, transform.localRotation);
+                    break;
+
+                case 11:
+                    transform.localRotation = Quaternion.Euler(0, 293, 0);
+                    Instantiate(sirpalePrefab, transform.position, transform.localRotation);
+                    break;
+
+                case 12:
+                    transform.localRotation = Quaternion.Euler(0, 66, 0);
+                    Instantiate(sirpalePrefab, transform.position, transform.localRotation);
+                    break;
+                case 13:
+                    transform.localRotation = Quaternion.Euler(0, 154, 0);
+                    Instantiate(sirpalePrefab, transform.position, transform.localRotation);
+                    break;
+                case 14:
+                    transform.localRotation = Quaternion.Euler(0, 238, 0);
+                    Instantiate(sirpalePrefab, transform.position, transform.localRotation);
+                    break;
+                case 15:
+                    transform.localRotation = Quaternion.Euler(0, 338, 0);
+                    Instantiate(sirpalePrefab, transform.position, transform.localRotation);
+                    break;
+            }
+        }
     }
 
     public void Tuho()
