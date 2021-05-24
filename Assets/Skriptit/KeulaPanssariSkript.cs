@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UralAktivointiScript : MonoBehaviour
+public class KeulaPanssariSkript : MonoBehaviour
 {
-    public Transform heroTriggerArea;
-    public GameObject Ural;
+
+    public BTR_DamageScript DamageSkript;
 
     // Start is called before the first frame update
     void Start()
@@ -21,10 +21,19 @@ public class UralAktivointiScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Bullet")
         {
-            Ural.SetActive(true);
+            Debug.Log("osuuko");
+
+            
+
+        }
+
+        if (other.tag == "HeroGranu")
+        {
+            Debug.Log("kranuOsu");
+
+            DamageSkript.btrCurrentHealth = -10;
         }
     }
-
 }
