@@ -884,7 +884,7 @@ MonoBehaviour:
   index: 0
   chaseRange: 21.71
   shootRange: 13.1
-  bullet: {fileID: 1479083926516724490, guid: 37b335064266d564081479d170595206, type: 3}
+  bullet: {fileID: 1479083926516724490, guid: 5ea5dd8020868584ab627ad8ae05881f, type: 3}
   bulletSpawnPoint: {fileID: 8001172706573347178}
   fireRate: 0.75
 --- !u!114 &8001172707247324593

@@ -20,6 +20,7 @@ public class HeroVol4 : MonoBehaviour
     public GameObject granu;
     public GameObject[] sarjaSpawn;
     public GameObject granuSpawn;
+    public GameObject muzzleFlash;
 
     int shotIndex = 0;
 
@@ -127,6 +128,7 @@ public class HeroVol4 : MonoBehaviour
             {
                 lastFire = Time.time + fireRate;
                 Instantiate(bullet, sarjaSpawn[shotIndex].transform.position, sarjaSpawn[shotIndex].transform.rotation);
+                Instantiate(muzzleFlash, sarjaSpawn[shotIndex].transform.position, sarjaSpawn[shotIndex].transform.rotation);
                 shotIndex++;
                 if (shotIndex > 2)
                     shotIndex = 0;
@@ -149,6 +151,7 @@ public class HeroVol4 : MonoBehaviour
             {
                 lastFire = Time.time + fireRate;
                 Instantiate(bullet, sarjaSpawn[shotIndex].transform.position, sarjaSpawn[shotIndex].transform.rotation);
+                Instantiate(muzzleFlash, sarjaSpawn[shotIndex].transform.position, sarjaSpawn[shotIndex].transform.rotation);
                 shotIndex++;
                 if (shotIndex > 2)
                     shotIndex = 0;
