@@ -886,7 +886,7 @@ MonoBehaviour:
   shootRange: 13.1
   bullet: {fileID: 1479083926516724490, guid: 5ea5dd8020868584ab627ad8ae05881f, type: 3}
   bulletSpawnPoint: {fileID: 8001172706573347178}
-  fireRate: 0.75
+  fireRate: 2
 --- !u!114 &8001172707247324593
 MonoBehaviour:
   m_ObjectHideFlags: 0

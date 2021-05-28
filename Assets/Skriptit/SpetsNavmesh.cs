@@ -84,7 +84,7 @@ public class SpetsNavmesh : MonoBehaviour
     {
         animator.SetFloat("Speed", 1f);
         Debug.Log("ChaseHero");
-        GetComponent<NavMeshAgent>().speed = 20f;
+        GetComponent<NavMeshAgent>().speed = 10f;
         navMeshAgent.SetDestination(target.position);
         if (distanceToTarget <= shootRange)
         {
