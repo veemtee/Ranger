@@ -82,8 +82,8 @@ public class GrenadeScript : MonoBehaviour
     public void explosion()
     {
         //explosionRadius.gameObject.SetActive(true);
-        audiosource.PlayOneShot(possaus, 1f);
-        audiosource.PlayOneShot(pamaus, 1f);
+        audiosource.PlayOneShot(possaus, 2f);
+        audiosource.PlayOneShot(pamaus, 2f);
         Invoke("Sirpaleet", 0f);
         GameObject spawnedParticle = Instantiate(explosionEffect, transform.position, transform.rotation);
         Destroy(spawnedParticle, 1);
@@ -102,7 +102,7 @@ public class GrenadeScript : MonoBehaviour
             }
         }
 
-        Invoke("Tuho", 0.01f);
+        Invoke("Tuho", 0.5f);
         
     }
 
