@@ -18,12 +18,16 @@ public class GrenadeScript : MonoBehaviour
     public Rigidbody rigid;
     public bool heitto = false;
     public GameObject sirpalePrefab;
+    public AudioClip possaus;
+    public AudioClip pamaus;
+    private AudioSource audiosource;
 
 
     // Start is called before the first frame update
     void Start()
     {
         countdown = timer;
+        audiosource = gameObject.GetComponent<AudioSource>();
         //spawn = GameObject.FindGameObjectWithTag("HeroGranu");
     }
 
@@ -78,6 +82,8 @@ public class GrenadeScript : MonoBehaviour
     public void explosion()
     {
         //explosionRadius.gameObject.SetActive(true);
+        audiosource.PlayOneShot(possaus, 1f);
+        audiosource.PlayOneShot(pamaus, 1f);
         Invoke("Sirpaleet", 0f);
         GameObject spawnedParticle = Instantiate(explosionEffect, transform.position, transform.rotation);
         Destroy(spawnedParticle, 1);
