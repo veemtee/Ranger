@@ -904,7 +904,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: ecfc1e235ed4b6644b9e4338b067cce7, type: 3}
     volume: 0.5
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: Pelimusic
     clip: {fileID: 8300000, guid: de2da9b5973e6b94ca660fceb827613f, type: 3}

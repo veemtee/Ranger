@@ -15,7 +15,9 @@ public class RagdollScriptiä : MonoBehaviour
     private Collider[] ragdollColliders;
 
     public ParticleSystem blood;
-
+    public AudioClip[] gruntSound;
+    private AudioSource audiosource;
+    private AudioClip soitettava;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,7 @@ public class RagdollScriptiä : MonoBehaviour
         ragdoll.gameObject.SetActive(false);
         ragdollBodies = GetComponentsInChildren<Rigidbody>();
         ragdollColliders = GetComponentsInChildren<Collider>();
+        audiosource = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,6 +40,11 @@ public class RagdollScriptiä : MonoBehaviour
 
         if(dead)
         {
+            int index = Random.Range(0, gruntSound.Length);
+            soitettava = gruntSound[index];
+            audiosource.clip = soitettava;
+            audiosource.Play();
+
             CopyTransformData(animated.transform, ragdoll.transform, agent.velocity);
             ragdoll.gameObject.SetActive(true);
             animated.gameObject.SetActive(false);
