@@ -20,6 +20,10 @@ public class SpetsNavmesh : MonoBehaviour
     private float lastFire = 0.0f;
     public float fireRate;
 
+    public AudioClip[] shootSound;
+    private AudioSource audiosource;
+    private AudioClip soitettava;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +31,7 @@ public class SpetsNavmesh : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         Invoke("StateMachine", 1f);
         target = GameObject.FindWithTag("Player").transform;
+        audiosource = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -103,6 +108,11 @@ public class SpetsNavmesh : MonoBehaviour
         {
             lastFire = Time.time + fireRate;
             Instantiate(bullet, bulletSpawnPoint.transform.position, bulletSpawnPoint.transform.rotation);
+
+            int index = Random.Range(0, shootSound.Length);
+            soitettava = shootSound[index];
+            audiosource.clip = soitettava;
+            audiosource.Play();
         }
     }
 

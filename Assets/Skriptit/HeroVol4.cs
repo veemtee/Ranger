@@ -32,9 +32,14 @@ public class HeroVol4 : MonoBehaviour
 
     GrenadeThrow grenadeThrow;
 
+    public AudioClip[] shootSound;
+    private AudioSource audiosource;
+    private AudioClip soitettava;
+
     void Start()
     {
         MyAnimator = GetComponentInChildren<Animator>();
+        audiosource = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -132,6 +137,11 @@ public class HeroVol4 : MonoBehaviour
                 shotIndex++;
                 if (shotIndex > 2)
                     shotIndex = 0;
+
+                int index = Random.Range(0, shootSound.Length);
+                soitettava = shootSound[index];
+                audiosource.clip = soitettava;
+                audiosource.Play();
             }
 
             if (Input.GetButtonUp("Fire1"))
@@ -155,6 +165,11 @@ public class HeroVol4 : MonoBehaviour
                 shotIndex++;
                 if (shotIndex > 2)
                     shotIndex = 0;
+
+                int index = Random.Range(0, shootSound.Length);
+                soitettava = shootSound[index];
+                audiosource.clip = soitettava;
+                audiosource.Play();
             }
             if (Input.GetButtonUp("Fire1"))
             {
