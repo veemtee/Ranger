@@ -192,7 +192,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 25.964685
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -217,13 +217,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314422630}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 1.97, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &610877719
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,9 +901,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Menumusic
+    clip: {fileID: 8300000, guid: ecfc1e235ed4b6644b9e4338b067cce7, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pelimusic
     clip: {fileID: 8300000, guid: de2da9b5973e6b94ca660fceb827613f, type: 3}
     volume: 0.5
-    pitch: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Bossmusic
+    clip: {fileID: 8300000, guid: 9edfb60a87e09ce42823843d7c22150c, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Loppumusic
+    clip: {fileID: 8300000, guid: 87160c1a546209440b640c94967197ea, type: 3}
+    volume: 0.5
+    pitch: 1
     loop: 0
     source: {fileID: 0}
 --- !u!1 &1877679259
