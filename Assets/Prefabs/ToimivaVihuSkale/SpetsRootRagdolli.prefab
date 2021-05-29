@@ -908,7 +908,7 @@ MonoBehaviour:
   ragdoll: {fileID: 8001172706594605229}
   animated: {fileID: 8001172706583278262}
   agent: {fileID: 8001172707247324595}
-  blood: {fileID: 4916695742855870904, guid: 364b96052b2c18c458b02d95bb0b0bf4, type: 3}
+  blood: {fileID: 4916695742855870904, guid: b928d95016fa34d459f95da98e2cb0b7, type: 3}
   gruntSound:
   - {fileID: 8300000, guid: d40a3041c8923164f827576d7318d409, type: 3}
   - {fileID: 8300000, guid: c628c9825f74e1843afcf9b16294535b, type: 3}
