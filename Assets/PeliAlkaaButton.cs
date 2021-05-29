@@ -12,7 +12,7 @@ public class PeliAlkaaButton : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void PeliAlkaa()
     {
         SceneManager.LoadScene("SkaleScene");
     }
