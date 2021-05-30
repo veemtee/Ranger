@@ -29,8 +29,8 @@ public class barracksDamageScript : MonoBehaviour
         {
             if (deadorAlive == false)
             {
-                audiosource.PlayOneShot(possaus, 2f);
-                audiosource.PlayOneShot(pamaus, 1.5f);
+                audiosource.PlayOneShot(possaus, 1f);
+                audiosource.PlayOneShot(pamaus, 1f);
                 Instantiate(isoRajahdys.gameObject, transform.position, transform.rotation);
                 Instantiate(Raato.gameObject, transform.position, transform.rotation);
                 Invoke("Tuhoutuminen", 1f);

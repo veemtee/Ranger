@@ -84,8 +84,8 @@ public class GrenadeScript : MonoBehaviour
     {
         //explosionRadius.gameObject.SetActive(true);
         //kranuRadiusTriggeri.SetActive(true);
-        audiosource.PlayOneShot(possaus, 2f);
-        audiosource.PlayOneShot(pamaus, 1.5f);
+        audiosource.PlayOneShot(possaus, 1f);
+        audiosource.PlayOneShot(pamaus, 1f);
         Invoke("Sirpaleet", 0f);
         GameObject spawnedParticle = Instantiate(explosionEffect, transform.position, transform.rotation);
         Destroy(spawnedParticle, 1);
