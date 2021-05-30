@@ -12,9 +12,14 @@ public class UralTakingDamageScript : MonoBehaviour
     //public Gamemanager gameManager;
     public ParticleSystem explosion;
 
+    public AudioClip[] hitSound;
+    private AudioSource audiosource;
+    private AudioClip soitettava;
+
     private void Start()
     {
         UralCurrentHealth = UralMaxHealth;
+        audiosource = gameObject.GetComponent<AudioSource>();
         //gameManager = GameObject.Find("GameManager").GetComponent<Gamemanager>();
     }
 
@@ -45,7 +50,10 @@ public class UralTakingDamageScript : MonoBehaviour
         if (other.tag == "Bullet")
         {
             Debug.Log("UralOsuma");
-
+            int index = Random.Range(0, hitSound.Length);
+            soitettava = hitSound[index];
+            audiosource.clip = soitettava;
+            audiosource.PlayOneShot(soitettava);
             UralCurrentHealth--;
             
         }

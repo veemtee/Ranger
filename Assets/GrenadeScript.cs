@@ -13,7 +13,7 @@ public class GrenadeScript : MonoBehaviour
     public float expForce = 500f;
     //public Collider explosionRadius;
 
-    public float force;
+    public float heittoforce;
     GameObject spawn;
     public Rigidbody rigid;
     public bool heitto = false;
@@ -21,7 +21,7 @@ public class GrenadeScript : MonoBehaviour
     public AudioClip possaus;
     public AudioClip pamaus;
     private AudioSource audiosource;
-    public GameObject kranuRadiusTriggeri;
+    //public GameObject kranuRadiusTriggeri;
 
 
     // Start is called before the first frame update
@@ -45,7 +45,7 @@ public class GrenadeScript : MonoBehaviour
 
         if (heitto == true)
         {
-            rigid.AddForce(transform.forward * force * Time.deltaTime, ForceMode.Impulse);
+            rigid.AddForce(transform.forward * heittoforce * Time.deltaTime, ForceMode.Impulse);
             heitto = false;
         }
 
@@ -83,7 +83,7 @@ public class GrenadeScript : MonoBehaviour
     public void explosion()
     {
         //explosionRadius.gameObject.SetActive(true);
-        kranuRadiusTriggeri.SetActive(true);
+        //kranuRadiusTriggeri.SetActive(true);
         audiosource.PlayOneShot(possaus, 2f);
         audiosource.PlayOneShot(pamaus, 1.5f);
         Invoke("Sirpaleet", 0f);
