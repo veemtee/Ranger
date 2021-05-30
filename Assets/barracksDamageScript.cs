@@ -26,7 +26,7 @@ public class barracksDamageScript : MonoBehaviour
         {
             if (deadorAlive == false)
             {
-                Instantiate(isoRajahdys.gameObject, transform.position, transform.rotation);
+                Instantiate(isoRajahdys.gameObject, transform.position, transform.rotation)
                 Instantiate(Raato.gameObject, transform.position, transform.rotation);
                 Invoke("Tuhoutuminen", 0.0f);
             }

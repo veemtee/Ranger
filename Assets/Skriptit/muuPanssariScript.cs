@@ -7,9 +7,10 @@ public class muuPanssariScript : MonoBehaviour
     public barracksDamageScript DamageSkript;
     public GameObject ricochet;
     //public AudioClip hitsound;
-    public AudioSource audiosource;
     //public AudioClip ricSound;
-
+    public AudioClip[] hitSound;
+    private AudioSource audiosource;
+    private AudioClip soitettava;
     // Start is called before the first frame update
     void Start()
     {
