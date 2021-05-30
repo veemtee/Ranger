@@ -10,7 +10,10 @@ public class barracksDamageScript : MonoBehaviour
     public GameObject Raato;
     public bool deadorAlive = false;
     public GameObject isoRajahdys;
-    
+
+    public AudioClip[] damageSound;
+    private AudioSource audiosource;
+    private AudioClip soitettava;
 
     //public GameObject keulaPanssariTrigger;
     //public GameObject muuPanssariTrigger;
@@ -26,7 +29,7 @@ public class barracksDamageScript : MonoBehaviour
         {
             if (deadorAlive == false)
             {
-                Instantiate(isoRajahdys.gameObject, transform.position, transform.rotation)
+                Instantiate(isoRajahdys.gameObject, transform.position, transform.rotation);
                 Instantiate(Raato.gameObject, transform.position, transform.rotation);
                 Invoke("Tuhoutuminen", 0.0f);
             }

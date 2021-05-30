@@ -6,6 +6,10 @@ public class KeulaPanssariSkript : MonoBehaviour
 {
 
     public BTR_DamageScript DamageSkript;
+    public GameObject ricochet;
+    public AudioClip[] damageSound;
+    private AudioSource audiosource;
+    private AudioClip soitettava;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +28,11 @@ public class KeulaPanssariSkript : MonoBehaviour
         if (other.tag == "Bullet")
         {
             Debug.Log("osuuko");
-
-            
+            int index = Random.Range(0, damageSound.Length);
+            soitettava = damageSound[index];
+            audiosource.clip = soitettava;
+            audiosource.Play();
+            Instantiate(ricochet, other.transform.position, other.transform.rotation);
 
         }
 

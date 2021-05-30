@@ -28,6 +28,11 @@ public class muuPanssariScript : MonoBehaviour
         if (other.tag == "HeroDamage")
         {
             Debug.Log("LuotiOsuPerään");
+            int index = Random.Range(0, hitSound.Length);
+            soitettava = hitSound[index];
+            audiosource.clip = soitettava;
+            audiosource.Play();
+
             Instantiate(ricochet, other.transform.position, other.transform.rotation);
 
             DamageSkript.btrCurrentHealth--;

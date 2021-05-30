@@ -5157,8 +5157,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageSkript: {fileID: 0}
-  ricochet: {fileID: 0}
-  audiosource: {fileID: 0}
+  ricochet: {fileID: 1096847040765866, guid: da2055c52d476a24ca75fb6bb32da33e, type: 3}
+  hitSound:
+  - {fileID: 8300000, guid: 755767312dcb76e4d8f89132840e27b6, type: 3}
+  - {fileID: 8300000, guid: 8c0a74221e2ce5447afd709dd84c979e, type: 3}
+  - {fileID: 8300000, guid: 1109be76748ea9747ab051589d5fc00e, type: 3}
 --- !u!4 &405146930 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5275a641e675c744ca69709291870d56,
@@ -13827,6 +13830,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageSkript: {fileID: 1722747012}
+  damageSound:
+  - {fileID: 8300000, guid: 92cc750e5b688b04c95122cb713722ac, type: 3}
+  - {fileID: 8300000, guid: 08835e32cc4cf1f41aee3815a8e9392d, type: 3}
+  - {fileID: 8300000, guid: ad9943c935c55344ba42881d2b5de1e7, type: 3}
+  - {fileID: 8300000, guid: 52c6a0fcc64111a47a3de20f6a0fa34e, type: 3}
 --- !u!1001 &995750985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30723,6 +30731,7 @@ MonoBehaviour:
   deadorAlive: 0
   isoRajahdys: {fileID: 1158129094165586, guid: e4f00dc65da66b4469d81d3c86c692d2,
     type: 3}
+  damageSound: []
 --- !u!82 &2046550962
 AudioSource:
   m_ObjectHideFlags: 0
