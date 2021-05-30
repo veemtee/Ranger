@@ -31,7 +31,7 @@ public class parraksDamage : MonoBehaviour
             int index = Random.Range(0, hitSound.Length);
             soitettava = hitSound[index];
             audiosource.clip = soitettava;
-            audiosource.Play();
+            audiosource.PlayOneShot(soitettava);
 
             Instantiate(ricochet, other.transform.position, other.transform.rotation);
 

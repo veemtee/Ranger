@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BTRTorniAmmuskeluScript : MonoBehaviour
 {
-    private GameObject hero;
+    public GameObject hero;
     private Rigidbody heroRb;
     public GameObject bullet;
     public GameObject btrTorni;

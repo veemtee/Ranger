@@ -31,7 +31,7 @@ public class KeulaPanssariSkript : MonoBehaviour
             int index = Random.Range(0, damageSound.Length);
             soitettava = damageSound[index];
             audiosource.clip = soitettava;
-            audiosource.Play();
+            audiosource.PlayOneShot(soitettava);
             Instantiate(ricochet, other.transform.position, other.transform.rotation);
 
         }

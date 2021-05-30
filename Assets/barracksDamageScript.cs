@@ -11,13 +11,16 @@ public class barracksDamageScript : MonoBehaviour
     public bool deadorAlive = false;
     public GameObject isoRajahdys;
 
+    public AudioClip possaus;
+    public AudioClip pamaus;
+    private AudioSource audiosource;
     //public GameObject keulaPanssariTrigger;
     //public GameObject muuPanssariTrigger;
 
     private void Start()
     {
         btrCurrentHealth = btrMaxHealth;
-
+        audiosource = gameObject.GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -26,9 +29,11 @@ public class barracksDamageScript : MonoBehaviour
         {
             if (deadorAlive == false)
             {
+                audiosource.PlayOneShot(possaus, 2f);
+                audiosource.PlayOneShot(pamaus, 1.5f);
                 Instantiate(isoRajahdys.gameObject, transform.position, transform.rotation);
                 Instantiate(Raato.gameObject, transform.position, transform.rotation);
-                Invoke("Tuhoutuminen", 0.0f);
+                Invoke("Tuhoutuminen", 0.5f);
             }
         }
     }

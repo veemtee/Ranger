@@ -25454,10 +25454,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 931f59b4dd115454bb04ea04cf2dd54e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btrMaxHealth: 10
-  btrCurrentHealth: 10
+  btrMaxHealth: 30
+  btrCurrentHealth: 30
   Raato: {fileID: 1599473922504453201, guid: 6fddda5947a1afd4d89747ae014cc7f9, type: 3}
   deadorAlive: 0
+  possaus: {fileID: 8300000, guid: c9fa7009a0561f54fb001780bc80664a, type: 3}
+  pamaus: {fileID: 8300000, guid: b1f55ca9c09e10c45affdbf7aeb27292, type: 3}
 --- !u!4 &1722747013 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9c9de87afb75e40409c72609e816ab94,
@@ -30932,6 +30934,8 @@ MonoBehaviour:
   deadorAlive: 0
   isoRajahdys: {fileID: 1158129094165586, guid: e4f00dc65da66b4469d81d3c86c692d2,
     type: 3}
+  possaus: {fileID: 8300000, guid: b1f55ca9c09e10c45affdbf7aeb27292, type: 3}
+  pamaus: {fileID: 8300000, guid: c9fa7009a0561f54fb001780bc80664a, type: 3}
 --- !u!82 &2046550962
 AudioSource:
   m_ObjectHideFlags: 0
@@ -32581,6 +32585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05170c21140ff8a418c860ff3563ea2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hero: {fileID: 0}
   bullet: {fileID: 1479083926516724490, guid: 37b335064266d564081479d170595206, type: 3}
   btrTorni: {fileID: 2132882880}
   timeBetweenShots: 0.5
