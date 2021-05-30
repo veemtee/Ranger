@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class muuPanssariScript : MonoBehaviour
 {
-    public BTR_DamageScript DamageSkript;
+    public barracksDamageScript DamageSkript;
+    public GameObject ricochet;
+    //public AudioClip hitsound;
+    public AudioSource audiosource;
+    //public AudioClip ricSound;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audiosource = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,6 +27,7 @@ public class muuPanssariScript : MonoBehaviour
         if (other.tag == "HeroDamage")
         {
             Debug.Log("LuotiOsuPerään");
+            Instantiate(ricochet, other.transform.position, other.transform.rotation);
 
             DamageSkript.btrCurrentHealth--;
 
