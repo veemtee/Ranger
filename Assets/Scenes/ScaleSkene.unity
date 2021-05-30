@@ -13830,6 +13830,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageSkript: {fileID: 1722747012}
+  ricochet: {fileID: 1571527845472800824, guid: fc54ced8b8ef35940b22a5a89477e1d7,
+    type: 3}
   damageSound:
   - {fileID: 8300000, guid: 92cc750e5b688b04c95122cb713722ac, type: 3}
   - {fileID: 8300000, guid: 08835e32cc4cf1f41aee3815a8e9392d, type: 3}
