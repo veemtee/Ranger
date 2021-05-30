@@ -11,16 +11,13 @@ public class barracksDamageScript : MonoBehaviour
     public bool deadorAlive = false;
     public GameObject isoRajahdys;
 
-    public AudioClip[] damageSound;
-    private AudioSource audiosource;
-    private AudioClip soitettava;
-
     //public GameObject keulaPanssariTrigger;
     //public GameObject muuPanssariTrigger;
 
     private void Start()
     {
         btrCurrentHealth = btrMaxHealth;
+
     }
 
     private void Update()

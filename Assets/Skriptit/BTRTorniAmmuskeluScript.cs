@@ -18,7 +18,7 @@ public class BTRTorniAmmuskeluScript : MonoBehaviour
     void Start()
     {
         hero = GameObject.Find("Player");
-        heroRb = hero.GetComponent<Rigidbody>();
+        heroRb = hero.GetComponentInChildren<Rigidbody>();
     }
 
     // Update is called once per frame

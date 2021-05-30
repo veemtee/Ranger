@@ -27,7 +27,7 @@ public class parraksDamage : MonoBehaviour
     {
         if (other.tag == "HeroDamage")
         {
-            Debug.Log("LuotiOsuPerään");
+            Debug.Log("parakki");
             int index = Random.Range(0, hitSound.Length);
             soitettava = hitSound[index];
             audiosource.clip = soitettava;

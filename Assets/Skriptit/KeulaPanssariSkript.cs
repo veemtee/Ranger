@@ -14,7 +14,7 @@ public class KeulaPanssariSkript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        audiosource = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
