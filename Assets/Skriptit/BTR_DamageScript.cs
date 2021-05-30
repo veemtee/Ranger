@@ -27,7 +27,7 @@ public class BTR_DamageScript : MonoBehaviour
             {
 
                 Instantiate(Raato.gameObject, transform.position, transform.rotation);
-                Invoke("Tuhoutuminen", 0.0f);
+                Invoke("Tuhoutuminen", 0.2f);
             }
         }
     }

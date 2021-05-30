@@ -5156,7 +5156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd69899484206444080e71e4ba5d1e46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageSkript: {fileID: 0}
+  DamageSkript: {fileID: 1722747012}
   ricochet: {fileID: 1096847040765866, guid: da2055c52d476a24ca75fb6bb32da33e, type: 3}
   hitSound:
   - {fileID: 8300000, guid: 755767312dcb76e4d8f89132840e27b6, type: 3}
@@ -13815,8 +13815,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.3626919, y: 3.0164356, z: 3.6287537}
-  m_Center: {x: -0.020368576, y: 0.07128811, z: -2.19063}
+  m_Size: {x: 4.820861, y: 4.396389, z: 4.493559}
+  m_Center: {x: -0.052725315, y: 0.30128098, z: -2.6230326}
 --- !u!114 &993776212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25281,8 +25281,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.2695632, y: 3.1674328, z: 7.754654}
-  m_Center: {x: -0.00000071525574, y: 0.05160427, z: -0.081056595}
+  m_Size: {x: 2.8216038, y: 3.1674328, z: 6.858734}
+  m_Center: {x: -0.017230034, y: 0.05160427, z: 0.0912323}
 --- !u!82 &1722747015
 AudioSource:
   m_ObjectHideFlags: 0
@@ -30668,7 +30668,7 @@ PrefabInstance:
     - target: {fileID: 1616681818518836061, guid: 15e62bf4056e1e849bd9f61a1b1aa767,
         type: 3}
       propertyPath: m_Name
-      value: Barracks2 (1)
+      value: BarracksDamagella
       objectReference: {fileID: 0}
     - target: {fileID: 1616681818583150409, guid: 15e62bf4056e1e849bd9f61a1b1aa767,
         type: 3}
@@ -30706,6 +30706,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1096847040765866, guid: da2055c52d476a24ca75fb6bb32da33e,
         type: 3}
+    - target: {fileID: 1616681818583150414, guid: 15e62bf4056e1e849bd9f61a1b1aa767,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1616681818583150408, guid: 15e62bf4056e1e849bd9f61a1b1aa767, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 15e62bf4056e1e849bd9f61a1b1aa767, type: 3}
@@ -30830,6 +30835,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2046550963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046550960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89d4bc99d4670e44997a2684b70b737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageSkript: {fileID: 2046550961}
+  ricochet: {fileID: 1096847040765866, guid: da2055c52d476a24ca75fb6bb32da33e, type: 3}
+  hitSound:
+  - {fileID: 8300000, guid: e9f1d27a64a29724ea1a89f0401e5985, type: 3}
+  - {fileID: 8300000, guid: 03f7e97804c203a44905a4269b89de7f, type: 3}
+  - {fileID: 8300000, guid: a6a8918231b9f8a47ac31687344acebe, type: 3}
+  - {fileID: 8300000, guid: af8e79fd7129b424eba13e444c3d0164, type: 3}
 --- !u!1001 &2048559083
 PrefabInstance:
   m_ObjectHideFlags: 0

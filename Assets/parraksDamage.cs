@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class muuPanssariScript : MonoBehaviour
+public class parraksDamage : MonoBehaviour
 {
-    public BTR_DamageScript DamageSkript;
+    public barracksDamageScript DamageSkript;
     public GameObject ricochet;
     //public AudioClip hitsound;
     //public AudioClip ricSound;
@@ -20,7 +20,7 @@ public class muuPanssariScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)

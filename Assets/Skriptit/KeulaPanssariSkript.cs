@@ -25,7 +25,7 @@ public class KeulaPanssariSkript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Bullet")
+        if (other.tag == "HeroDamage")
         {
             Debug.Log("osuuko");
             int index = Random.Range(0, damageSound.Length);
