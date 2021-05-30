@@ -21,6 +21,7 @@ public class GrenadeScript : MonoBehaviour
     public AudioClip possaus;
     public AudioClip pamaus;
     private AudioSource audiosource;
+    public GameObject kranuRadiusTriggeri;
 
 
     // Start is called before the first frame update
@@ -82,6 +83,7 @@ public class GrenadeScript : MonoBehaviour
     public void explosion()
     {
         //explosionRadius.gameObject.SetActive(true);
+        kranuRadiusTriggeri.SetActive(true);
         audiosource.PlayOneShot(possaus, 2f);
         audiosource.PlayOneShot(pamaus, 1.5f);
         Invoke("Sirpaleet", 0f);

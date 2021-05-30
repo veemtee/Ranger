@@ -33,7 +33,7 @@ public class barracksDamageScript : MonoBehaviour
                 audiosource.PlayOneShot(pamaus, 1.5f);
                 Instantiate(isoRajahdys.gameObject, transform.position, transform.rotation);
                 Instantiate(Raato.gameObject, transform.position, transform.rotation);
-                Invoke("Tuhoutuminen", 0.5f);
+                Invoke("Tuhoutuminen", 1f);
             }
         }
     }
